@@ -1,8 +1,13 @@
-let c = 0;
-
-function callback() {
-    console.log(c)
-    document.querySelectorAll("h4")[1].innerHTML = c;
-    c=c+1;
+function addToDo() {
+    let ctr = 0;
+    const value = document.querySelector("input").value;    
+    const newDivEl = document.createElement("div");
+    newDivEl.setAttribute("id", ctr);
+    ctr = ctr + 1;
+    newDivEl.innerHTML= "<div>" + value + "</div> <button onclick = 'deleteToDo()'>Delete</button>";
+    document.querySelector("body").appendChild(newDivEl);
 }
-setInterval(callback, 1000); 
+
+function deleteToDo(){
+
+}
